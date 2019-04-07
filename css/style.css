@@ -167,23 +167,25 @@ div i.fab {
 /* style color of icons */
 i.social {
 	color: black;
+	padding-left: 10px;
+	padding-top: 10px;
 }
 
 /* got help for this from https://codeburst.io/tutorial-three-awesome-css-hover-transitions-animations-for-beginners-c14c08309091 */
 
-@keyframes wiggle {
+/*@keyframes wiggle {
   20%  { transform: translateX(4px);  }
   40%  { transform: translateX(-4px); }
   60%  { transform: translateX(2px);  }
   80%  { transform: translateX(-1px); }
   100% { transform: translateX(0);    }
 }
-
+*/
 i.social:hover {
 	opacity: 0.9;
 	color: #4B0082;
-	animation: wiggle 1s;
-	animation-iteration-count: 1;
+	/*animation: wiggle 1s;
+	animation-iteration-count: 1;*/
 }
 
 

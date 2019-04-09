@@ -1,0 +1,22 @@
+span{
+	height: 50px;
+	width: 75px;
+	background: #00ff00;
+	display: inline-block; 
+	/* but they are actually not big because they are inline must change default */
+	/* when I do block they go on top of each other */
+}
+
+div{
+	height: 100px;
+	width: 45 %;
+	background: #00ffff;
+	display: inline-block; 
+	/* choose block, inline-block, or span */
+}
+
+p{
+	background: #ff00ff;
+	width: 200px;
+	height: 100px;
+}

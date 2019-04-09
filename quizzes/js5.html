@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>JavaScript</title>
+ Change the color of the 5th list item to to red or blue using the radio buttons below.
+ <script type="text/javascript">
+ // YOUR CODE HERE
+ function changeColor() {
+ 	 var blueCheck = document.querySelector('#blue').checked
+ 	 var redCheck = document.querySelector('#red').checked
+ 	 console.log("blue checked: " + blueCheck)
+ 	 console.log("red checked: " + redCheck)
+ 	 if (redCheck === true) {
+ 	 	console.log('choosing Red');
+ 	 	redCheck = true;
+ 	 	blueCheck = false;
+ 	 	document.querySelectorAll('li')[4].style.color = 'red';
+ 	 } 
+ 	 else if (blueCheck === true){
+ 	 	console.log('choosing Blue');
+ 	 	blueCheck = true;
+ 	 	redCheck = false;
+ 	 	document.querySelectorAll('li')[4].style.color = 'blue'; 
+ 	 }
+ }
+
+ </script>
+</head>
+<body>
+ You may not change the structure of the ordered list in any way, or add any ids or classes to it or the list items.
+ <ol>
+ <li>Blah</li>
+ <li>Blah</li>
+ <li>Blah</li>
+ <li>Blah</li>
+ <li>Blah</li>
+ <li>Blah</li>
+ <li>Blah</li>
+ <li>Blah</li>
+ <li>Blah</li>
+</ol>
+ <label>
+ <input type="radio" value = "red">
+ Red
+ </label>
+ <label>
+ <input type="radio" value = "blue">
+ Blue
+ </label>
+
+</fieldset>
+</body>
+</html>

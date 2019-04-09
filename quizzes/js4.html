@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>JavaScript 2019</title>
+<script>
+function check(){
+// 1) Use an alert to say goodbye to the person, e.g. "Goodbye Colleen"
+alert('Goodbye ' + document.getElementById('who').value)
+
+// 2) Update the form so that the action is updated to the person's favorite place to waste time.
+// did not edit any html
+var pinterest = document.querySelector('#pin')
+var twitter = document.querySelector('#twit')
+var instagram = document.querySelector('#ins')
+var wikipedia = document.querySelector('#wiki')
+var form = document.querySelector('#form')
+if (pinterest.checked) {
+	form.action = pinterest.value
+}
+else if (twitter.checked) {
+	form.action = twitter.value
+}
+
+else if (instagram.checked) {
+	form.action = instagram.value
+}
+
+else if (wikipedia.checked) {
+	form.action = wikipedia.value
+}
+// console.log(getElementsByName('interests')[0].value)
+}
+</script>
+</head>
+<body>
+
+<form id = "form" onsubmit = "check()">
+<label for ="who"> What is your name?</label><input type = "text" id = "who"><br><br>
+
+What is your favorite place to waste time?<br>
+<input type = "radio" name ="interests" value = "http://www.pinterest.com" id = "pin"><label for = "pin">Pinterest</label><br>
+
+<input type = "radio" name ="interests" value = "http://www.twitter.com" id = "twit"><label for = "twit">Twitter</label><br>
+
+<input type = "radio" name ="interests" value = "http://www.instagram.com" id = "ins"><label for = "ins">Instagram</label><br>
+
+<input type = "radio" name ="interests" value = "http://www.wikipedia.com" id = "wiki"><label for = "wiki">Wickipedia</label><br>
+<input type = "submit">
+</form>
+
+
+</body>
+</html>

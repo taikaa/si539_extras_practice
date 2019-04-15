@@ -1,11 +1,11 @@
 var i = 0;
 var title = 'About me';
 var speed = 50;
-
+// must demo first part in safari not Chrome 
 function typeWriter() {
 // 	//adjust for if the user prefers reduced motion
-	if (window.matchMedia('(prefers-reduced-motion)')) {
-    document.querySelector('.typerwriter').innerHTML = "About me";
+	if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.querySelector('.typewriter').innerHTML = title;
    
 }
     else if (i < title.length) {
@@ -14,5 +14,3 @@ function typeWriter() {
     setTimeout(typeWriter, speed);
   }
 }
-
- 

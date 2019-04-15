@@ -163,7 +163,6 @@ div i.fab {
 
 
 
-
 /* style color of icons */
 i.social {
 	color: black;
@@ -208,7 +207,6 @@ div.projects{
 div.projects h2 {
 	margin-left: 1rem;
 	padding-bottom: 1.2rem;
-	/*text-align: center;*/
 	font-size: 1.2em;
 }
 
@@ -254,7 +252,7 @@ div.about_me {
 	margin-left: 5%;
 	margin-bottom: 5%;
 	display: inline-block;
-	width: 90%;
+	/*width: 90%;*/
 
 }
 
@@ -266,23 +264,24 @@ div.about_me {
 
 div.pyramid {
 	display: inline-block;
-	/*width: 90%;*/
-	margin-left: 15%;
+	/*width: 30%;*/
+	/*margin-left: 15%;*/
+	/*height: 30vh;*/
+	/*width: 300px;*/
 	height: 30vh;
-	width: 300px;
-	height: 300px;
 	margin-bottom: 5%;
 }
 
 div.pyramid img {
 	/*margin-left: 15%;*/
 	height: 40vh;
-	margin-bottom: 40%;
+	/*margin-bottom: 40%;*/
 }
 
-	/*img.pyramid {
-		margin:auto;
-	}*/
+div#flip-card-front {
+	visibility: hidden;
+}
+
 
 
 	
@@ -292,11 +291,18 @@ div.pyramid img {
 
 
 div.ux {
-	margin-left: 1%;
-	margin-right: 1%;
+	margin-left: 7%;
+	margin-right: 7%;
 	padding-bottom: 4%;
 	/*padding-top: 2%;*/
 }
+
+p.ux, ul.ux {
+	padding-left: 7%;
+	padding-right: 7%;
+}
+
+
 
 img.ux {
 	display: block;
@@ -314,10 +320,69 @@ img.companalysis {
     grid-template-columns: 1fr;
     grid-gap: 10px;
     justify-items: center;
+    padding-bottom: 4%;
 }
 
 .ux_grid img {
 	border: 1px solid black;
+}
+
+
+/* -------- OZ Video Player ------- */
+/*.ozplayer-container {
+	padding-bottom: 5% !important;
+	margin: 5% 10% 0 10%;
+	width: 100%;
+	height: 100%;
+}*/
+
+
+div.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+
+div.oz-modal {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+ /* height: 80%;*/
+}
+
+.close-modal {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  display: block;
+  font-size: 40px;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+  color: black;
+  cursor: pointer;
+}
+
+.ozplayer-container {
+	/*margin: auto;*/
+	margin-left: 100px;
+	margin-top: 70px;
+	display: block;
+}
+
+.ozplayer {
+	margin: auto !important;
 }
 
 /* ----end ux page ----*/
@@ -482,10 +547,10 @@ nav li a {
 	display: block;
 }
 
-div.about_me {
+/*div.about_me {
 	width:40%;
 	display: inline-block;
-}
+}*/
 
 /*div.pyramid {
 	/*width: 300px;*/
@@ -493,17 +558,45 @@ div.about_me {
 	/*margin-left: 15%;*/ /* added  4-4 */
 /*}*/
 
+div.grid-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: repeat(6, 1fr);
+	grid-column-gap: 100px;
+}
+
+div.col_1 {
+	grid-column: 1/2;
+	grid-row: 1/7;
+}
+
+div.pyramid {
+	grid-column: 2/3;
+	grid-row: 2/4; 
+}
+
+div.flip-card {
+	padding-top: 10%;
+	grid-column: 2/3;
+	grid-row: 4/5;
+}
+
 
 
 /* -------------flip card on large screen only---------------*/
 
 div.flip-card {
 	background-color: transparent;
-	width: 300px;
-	height: 300px;
-	margin-left: 15%;
-	display: inline-block;
-	margin-bottom: 5%;
+	width: 200px;
+	height: 50px;
+	/*margin-left: 15%;*/
+	/*display: inline-block;*/
+	/*margin-bottom: 5%;*/
+	perspective: 1000px;
+}
+
+div#flip-card-front {
+	visibility: visible;
 }
 
 div.card-animation {
@@ -516,6 +609,7 @@ div.card-animation {
 
 div.flip-card:hover .card-animation {
 	transform: rotateX(180deg);
+	/*display: inline-block;*/
 }
 
 div.card-front, div.card-back {
@@ -524,7 +618,9 @@ div.card-front, div.card-back {
 	width: 100%;
 	height: 100%;
 	backface-visibility: hidden;
+	/*display: inline-block;*/
 }
+
 
 div.card-back {
 	background-color: grey;
